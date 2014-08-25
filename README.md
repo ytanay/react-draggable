@@ -5,7 +5,7 @@ React draggable component
 ## Installing
 
 ```bash
-npm install react-draggable
+$ npm install react-draggable
 ```
 
 ## Demo
@@ -50,6 +50,8 @@ var App = React.createClass({
 			//
 			// `cancel` specifies a selector to be used to prevent drag initialization.
 			//
+			// `grid` specifies the x and y that dragging should snap to.
+			//
 			// `zIndex` specifies the zIndex to use while dragging.
 			//
 			// `onStart` is called when dragging starts.
@@ -61,6 +63,7 @@ var App = React.createClass({
 			<Draggable
 				axis="x"
 				handle=".handle"
+				grid={[25, 25]}
 				zIndex={100}
 				onStart={this.handleStart}
 				onDrag={this.handleDrag}
@@ -80,10 +83,10 @@ React.renderComponent(<App/>, document.body);
 ## Contributing
 
 - Fork the project
-- `$ npm install && npm run build`
+- `$ npm install && npm start`
 - Make changes, webpack will watch and rebuild as you make changes
 - Add appropriate tests
-- `$ npm run test`
+- `$ npm test`
 - If tests don't pass, make them pass.
 - Update README with appropriate docs.
 - Commit and PR
