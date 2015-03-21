@@ -67,6 +67,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var React = __webpack_require__(2);
 	var emptyFunction = __webpack_require__(3);
 	var CX = require('classnames');
+	var cloneWithProps = require('react-clonewithprops');
 	
 	function createUIEvent(draggable) {
 		return {
@@ -551,7 +552,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			});
 			// Reuse the child provided
 			// This makes it flexible to use whatever element is wanted (div, ul, etc)
-			return React.addons.cloneWithProps(React.Children.only(this.props.children), {
+			return cloneWithProps(React.Children.only(this.props.children), {
 				style: style,
 				className: className,
 	
